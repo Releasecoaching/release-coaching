@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+body {
+  color: #707070;
+  font-family: sans-serif;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #707070;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+
+
+
+.wrapper {
+  max-width: 1000px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+#header .logo {
+  max-width: 190px;
+  line-height: 0;
+}
+#header logo a {
+  display: block;
+}
+#header .navi {
+  display: flex;
+  align-items: center;
+}
+#header .navi li{
+  font-size: 14px;
+  margin-left: 40px;
+}
+
+.mainvisual {
+  margin-bottom: 80px;
+}
+.introduction {
+ margin-bottom: 80px;
+ text-align: center;
+}
+.introduction .catchphrase {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.introduction .text {
+  font-size: 14px;
+}
+
+.section-title {
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+.section-title .en {
+  display: block;
+  font-size: 40px;
+}
+.section-title .ja{
+  display: block;
+  font-size: 14px;
+}
+
+#profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 120px;
+}
+#profile .img {
+  width: 50%;
+}
+#profile .detail {
+  width: 50%;
+  padding-left: 80px;
+}
+#profile .detail p {
+  font-size: 14px;
+  line-height: 2;
+}
+
+#works {
+  margin-bottom: 120px;
+}
+#works .works-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+#works .works-list li {
+  width: 32%;
+  margin: 0 2% 2% 0;
+}
+#works .works-list li:nth-child(3n) {
+  margin-right: 0;
+}
+
+#footer {
+  font-size: 12px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  
+ /*-------------------------------------------
+  Header
+  -------------------------------------------*/
+  #header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  } 
+  #header .logo {
+    max-width: 120px;
+  }
+
+
+ /*-------------------------------------------
+  Mainvisual
+  -------------------------------------------*/
+   .mainvisual {
+     margin-bottom: 50px;
+   }
+   .introduction {
+     margin-bottom: 50px;
+   }
+   .introduction  .catchiphrase {
+     font-size: 16px;
+   }
+   .introduction .text {
+     text-align: left;
+   }
+ 
+
+  .section-title {
+    margin-bottom: 25px;
+  }
+  .section-title .en {
+    font-size: 32px;
+  }
+
+  #profile {
+    flex-direction: column-reverse;
+    margin-bottom: 60px;
+  }
+  #profile .img {
+    width: 100%;
+  }
+  #profile detail {
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+  
+  #works {
+    margin-bottom: 60px;
+  }
+  #works .works-list {
+    flex-direction: column;
+  }
+  #works .works-list li {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+}
+
+  

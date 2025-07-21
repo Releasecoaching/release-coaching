@@ -3,14 +3,11 @@ html, body {
   padding: 0;
   overflow-x: hidden; /* 横スクロールを防ぐ */
   width: 100%;
-}
-
-body {
   font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", sans-serif;
   color: #333;
   background: #fff;
   line-height: 1.8;
-}
+}  
 
 .wrapper {
   max-width: 100%; /* 最大幅を100%に設定 */
@@ -127,7 +124,7 @@ img {
 }
 
 /* flowとcontactセクションの画像サイズ調整 */
-.flow-image, .contact img {
+.flow-image, .contact-image {
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -180,12 +177,6 @@ body {
   line-height: 1.8;
   margin: 0;
   padding: 0;
-}
-
-.wrapper {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 40px 20px;
 }
 
 /* ヘッダー */
@@ -371,7 +362,7 @@ body {
   flex: 0 0 40%; /* 画像が占める幅を40%に設定 */
 }
 
-.service-list .img img {
+.service-list .img {
   width: 100%; /* 画像を親要素にフィットさせる */
   height: auto;
   border-radius: 8px;
@@ -401,7 +392,7 @@ body {
   }
 
   .logo img {
-    height: 40px;  /* ロゴ画像が大きすぎる場合の調整 */
+    height: 40px;
   }
 
   .wrapper {
@@ -413,24 +404,16 @@ body {
     height: auto;
   }
 
-  /* プロフィール画像のサイズ調整 */
   .profile-wrapper {
-    flex-direction: column; /* モバイルで縦並びに */
+    flex-direction: column;
   }
 
-  .img {
-    flex: 0 0 100%; /* 画像の幅を100%に設定 */
-    margin-bottom: 20px; /* 画像とテキストの間にスペース */
-  }
-
-  .detail {
+  .img, .detail {
     flex: 0 0 100%;
   }
-}
-@media screen and (max-width: 768px) {
+
   .contact-image {
     width: 100%;
     max-width: 100%;
   }
 }
-

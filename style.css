@@ -278,23 +278,23 @@ body {
 /* プロフィール画像と文章を横に並べるための設定 */
 .profile-wrapper {
   display: flex;
-  flex-wrap: wrap; /* 画面幅が狭くなると縦に並ぶようにする */
+  flex-wrap: wrap;
   gap: 20px;
-  align-items: center; /* 画像とテキストの垂直方向の位置を調整 */
+  align-items: center;
 }
 
-.img {
-  flex: 0 0 40%; /* 画像が占める幅を40%に設定 */
+.profile-img {
+  flex: 0 0 40%;
 }
 
-.img img {
-  width: 100%; /* 画像が親要素にフィットするように設定 */
+.profile-img img {
+  width: 100%;
   height: auto;
-  border-radius: 8px; /* 画像の角を丸くするオプション */
+  border-radius: 8px;
 }
 
 .detail {
-  flex: 1; /* 残りのスペースを文章が占める */
+  flex: 1;
   font-size: 1.1rem;
 }
 
@@ -352,7 +352,6 @@ body {
 }
 
 /* 画像調整 */
-.img img,
 .vision-img img,
 .service-list img {
   max-width: 100%;
@@ -424,26 +423,24 @@ body {
     height: auto;
   }
 
-  /* プロフィール画像のサイズ調整 */
+  @media screen and (max-width: 768px) {
   .profile-wrapper {
-    flex-direction: column; /* モバイルで縦並びに */
+    flex-direction: column;
+    align-items: center;
   }
 
-  .img {
-   flex: none;
-    width: 150px; /* スマホでは幅固定 */
+  .profile-img {
+    flex: none;
+    width: 150px;
     margin-bottom: 20px;
-  }
-.img img {
-    width: 100%;
-    height: auto;
   }
 
   .detail {
-    font-size: 1rem;
     text-align: center;
+    font-size: 1rem;
   }
 }
+
 @media screen and (max-width: 768px) {
   .contact-image {
     width: 100%;

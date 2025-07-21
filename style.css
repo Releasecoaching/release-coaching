@@ -455,19 +455,19 @@ body {
     margin-bottom: 20px;
   }
 
-  .content-block {
+.content-block {
     display: flex;
     align-items: center;
-    gap: 2rem; /* 間隔を空ける */
+    gap: 2rem;
   }
 
   .content-block .text,
   .content-block .image {
-    flex: 1; /* 横幅を均等に */
+    flex: 1;
   }
 
   .content-block .image img {
-    max-width: 100%;
+    width: 100%;   /* 親要素にフィットさせる */
     height: auto;
     display: block;
   }

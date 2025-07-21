@@ -121,9 +121,9 @@ body {
 }
 
 .profile-img img {
-  width: 200px;  /* スマホ用画像サイズ */
+  width: 100%;  /* スマホ用画像サイズ */
   height: auto;
-  border-radius: 50%;
+  border-radius: 8px;
   margin-bottom: 20px;
 }
 
@@ -131,29 +131,6 @@ body {
   flex: 1;
   font-size: 1.1rem;
 }
-
-/* PC表示：横並び */
-@media (min-width: 768px) {
-  #Profile .profile-img {
-    display: flex;           /* 横並びに変更 */
-    flex-direction: row;     /* 横並び */
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-  }
-
-  #Profile .profile-img img {
-    width: 300px;  /* PC用画像サイズ */
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 0; /* 下の余白を削除 */
-  }
-
-  #Profile .profile-text {
-    font-size: 18px;
-  }
-}
-
 
 /* flowとcontactセクションの画像サイズ調整 */
 .flow-image, .contact img {
@@ -188,20 +165,6 @@ body {
     padding: 20px 10px;
   }
 
-  /* プロフィール画像のサイズ調整 */
-  .profile-wrapper {
-    flex-direction: column;
-  }
-
-  .img {
-    flex: 0 0 100%;
-    margin-bottom: 20px;
-  }
-
-  .detail {
-    flex: 0 0 100%;
-  }
-}
 body {
   font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", sans-serif;
   color: #333;

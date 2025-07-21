@@ -30,10 +30,10 @@ html, body {
   height: 60px;
 }
 
-.nav ul {
-  list-style: none;
+nav ul {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -171,22 +171,24 @@ img {
   }
 }
 body {
-  font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", sans-serif;
-  color: #333;
-  background: #fff;
-  line-height: 1.8;
+  font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
+
 /* ヘッダー */
-#header {
-  background-color: #f5f5f5;
-  padding: 10px 20px;
+header {
+  background-color: #ffffff;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
 }
 
 .logo img {
@@ -256,26 +258,23 @@ body {
 }
 
 /* プロフィール画像と文章を横に並べるための設定 */
-.profile-wrapper {
+.profile {
   display: flex;
-  flex-wrap: wrap; /* 画面幅が狭くなると縦に並ぶようにする */
-  gap: 20px;
-  align-items: center; /* 画像とテキストの垂直方向の位置を調整 */
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 2rem;
 }
 
-.img {
-  flex: 0 0 40%; /* 画像が占める幅を40%に設定 */
+.profile img {
+  max-width: 100%;
+  width: 150px;
+  border-radius: 8px;
 }
 
-.img img {
-  width: 100%; /* 画像が親要素にフィットするように設定 */
-  height: auto;
-  border-radius: 8px; /* 画像の角を丸くするオプション */
-}
-
-.detail {
-  flex: 1; /* 残りのスペースを文章が占める */
-  font-size: 1.1rem;
+.profile-text {
+  flex: 1;
+  min-width: 200px;
 }
 
 /* サービスリスト */
@@ -309,17 +308,13 @@ body {
 /* LINEボタン */
 .line-button {
   display: inline-block;
-  background-color: #06c755;
+  background-color: #06C755;
   color: white;
-  padding: 10px 20px;
+  padding: 0.8rem 1.5rem;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 20px;
-}
-
-.line-button:hover {
-  background-color: #05b04e;
+  margin-top: 1rem;
 }
 
 /* フッター */
@@ -385,35 +380,34 @@ body {
 
 /* レスポンシブ対応 */
 @media screen and (max-width: 768px) {
-  .nav ul {
+  header {
     flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
+    align-items: flex-start;
   }
 
-  .logo img {
-    height: 40px;
-  }
-
-  .wrapper {
-    padding: 20px 10px;
-  }
-
-  .mainvisual img {
-    width: 100%;
-    height: auto;
-  }
-
-  .profile-wrapper {
+  nav ul {
     flex-direction: column;
-  }
-
-  .img, .detail {
-    flex: 0 0 100%;
-  }
-
-  .contact-image {
     width: 100%;
-    max-width: 100%;
+  }
+
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-text {
+    text-align: left;
+    width: 100%;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 }

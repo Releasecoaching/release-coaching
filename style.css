@@ -108,28 +108,26 @@ body {
   border-radius: 8px;
 }
 
-.profile-wrapper {
+/* プロフィール画像と文章を横に並べるための設定 */
+#Profile .profile-img {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column; /* スマホでは縦並びにする */
   align-items: center;
-  justify-content: center;  /* 横並びに中央寄せ */
+  margin: 40px 20px;
+  text-align: center;
 }
 
-.profile-img {
-  flex: 0 0 auto; /* 画像のサイズを固定せずに親要素のサイズに合わせる */
-}
-
-.profile-img img {
-  width: 300px;  /* PC用の画像サイズを指定 */
+#Profile .profile-img img {
+  width: 200px;  /* 画像のサイズ */
   height: auto;
   border-radius: 50%;
   margin-bottom: 20px;
 }
 
-.detail {
-  flex: 1;
-  font-size: 1.1rem;
+#Profile .profile-text {
+  font-size: 16px;
+  font-weight: normal;
+  max-width: 500px;
 }
 
 /* PC表示：横並び */
@@ -294,18 +292,16 @@ body {
   flex-wrap: wrap;
   gap: 20px;
   align-items: center;
-  justify-content: center;
 }
 
 .profile-img {
-  flex: 0 0 auto; /* 画像の幅を親要素に合わせる */
+  flex: 0 0 40%;
 }
 
 .profile-img img {
-  width: 200px;  /* スマホ用画像サイズ */
+  width: 100%;
   height: auto;
-  border-radius: 50%;
-  margin-bottom: 20px;
+  border-radius: 8px;
 }
 
 .detail {
@@ -418,20 +414,56 @@ body {
 }
 
 /* レスポンシブ対応 */
-@media (min-width: 768px) {
+@media screen and (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .logo img {
+    height: 40px;  /* ロゴ画像が大きすぎる場合の調整 */
+  }
+
+  .wrapper {
+    padding: 20px 10px;
+  }
+
+  .mainvisual img {
+    width: 100%;
+    height: auto;
+  }
+#Profile .profile-img {
+  display: flex;
+  flex-direction: column; /* スマホでは縦並びにする */
+  align-items: center;
+  margin: 40px 20px;
+  text-align: center;
+}
+
+#Profile .profile-img img {
+  width: 200px;  /* 画像のサイズ */
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+#Profile .profile-text {
+  font-size: 16px;
+  font-weight: normal;
+  max-width: 500px;
+}
+
+  @media screen and (max-width: 768px) {
   #Profile .profile-img {
-    display: flex;           /* 横並びに変更 */
-    flex-direction: row;     /* 横並び */
+    flex-direction: row; /* 横並びに変更 */
     justify-content: center;
-    align-items: center;
-    text-align: left;
+    text-align: left; /* 左寄せにする */
   }
 
   #Profile .profile-img img {
-    width: 300px;  /* PC用画像サイズ */
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 0; /* 下の余白を削除 */
+    margin-right: 30px; /* 画像とテキストの間に余白を追加 */
+    margin-bottom: 0;   /* 下の余白を削除 */
   }
 
   #Profile .profile-text {
@@ -439,27 +471,13 @@ body {
   }
 }
 
-/* スマホ表示はそのまま */
-@media screen and (max-width: 768px) {
-  #Profile .profile-img {
-    display: flex;  /* 縦並びにしない */
-    flex-direction: column;
-    align-items: center;
-    margin: 40px 20px;
+  .detail {
     text-align: center;
+    font-size: 1rem;
   }
 
-  #Profile .profile-img img {
-    width: 200px;  /* スマホ用画像サイズ */
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 20px;
-  }
-
-  #Profile .profile-text {
-    font-size: 16px;
-    font-weight: normal;
-    max-width: 500px;
-    text-align: center;
+  .contact-image {
+    width: 100%;
+    max-width: 100%;
   }
 }

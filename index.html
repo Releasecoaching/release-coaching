@@ -6,41 +6,42 @@
   <style>
   .profile-section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* スマホでは縦並び */
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
+    margin-bottom: 50px;
   }
 
-  .profile-section img {
+  .profile-image {
     width: 150px;
     height: auto;
     border-radius: 50%;
+    margin-bottom: 20px;
   }
 
   .profile-text {
-    flex: 1;
-    min-width: 200px;
+    max-width: 600px;
+    text-align: center;
   }
 
-  /* スマホ表示用の調整 */
-  @media (max-width: 600px) {
+  /* PC表示用に横並びに変更 */
+  @media (min-width: 768px) {
     .profile-section {
-      flex-direction: column;
+      flex-direction: row; /* 横並びに切り替え */
       align-items: center;
-      text-align: center;
+      justify-content: center;
     }
 
-    .profile-section img {
-      width: 120px;
+    .profile-image {
+      width: 150px; /* スマホと同じサイズを維持 */
+      margin-right: 30px;
+      margin-bottom: 0;
     }
 
     .profile-text {
-      text-align: center;
+      text-align: left;
     }
   }
-  </style>
+</style>
 
 
   <meta name="description" content="苫米地式コーチング認定コーチ補の西口皓輝です。">

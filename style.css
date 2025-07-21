@@ -441,12 +441,6 @@ body {
   text-align: center;
 }
 
-#Profile .profile-img img {
-  width: 200px;  /* 画像のサイズ */
-  height: auto;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
 
 #Profile .profile-text {
   font-size: 16px;
@@ -454,6 +448,13 @@ body {
   max-width: 500px;
 }
 @media (min-width: 768px) {
+  #Profile .profile-img img {
+  width: 200px;  /* 画像のサイズ */
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
   .content-block {
     display: flex;
     align-items: center;

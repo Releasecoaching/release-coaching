@@ -3,6 +3,43 @@
  <head>
   <meta charset="utf-8">
   <title>Release Coaching</title>
+  <style>
+  .section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .content-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .content-row img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .content-row p {
+    max-width: 600px;
+  }
+
+  @media (min-width: 768px) {
+    .content-row {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .content-row p {
+      text-align: left;
+    }
+  }
+  </style>
+
   <meta name="description" content="苫米地式コーチング認定コーチ補の西口皓輝です。">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="img/favicon.ico">
@@ -41,17 +78,15 @@
  </div>
 </main>
 
-<section id="profile">
-  <div class="profile-wrapper">
-    <div class="img">
-      <img src="profile.jpg" alt="プロフィール">
-    </div>
-    <div class="detail">
-      <h2 class="section-title">
-        <span class="en">Profile</span>
-        <span class="ja">自己紹介</span>
-      </h2>
-      <p>
+<section id="Profile" class="wrapper">
+  <h2 class="section-title">
+    <span class="en">Profile</span>
+    <span class="ja">プロフィール</span>
+  </h2>
+  <div class="profile-img">
+    <img src="profile.jpg" alt="ビジョン">
+  </div>
+    <p>
         苫米地式コーチング認定コーチの西口皓輝です。<br>
         高校教師として教育現場に携わりながら、自己変革の重要性に気づき、コーチングを通じて人々が自らの可能性を最大限に引き出すサポートをしています。<br><br>
         クライアントの言葉に隠された本音や感情を読み取り、その背後にある深層的な願望を見つけ出すことが得意です。<br><br>
@@ -162,11 +197,12 @@
 
 
   <!-- 教育機関向けセクション -->
-<section>
-  <h3 class="section-title">
-    <span class="en">For Schools</span>
-    <span class="ja">教育機関向け出張授業・講演</span>
-  </h3>
+<section id="For education" class="wrapper">
+  <h2 class="section-title">
+    <span class="en">For Education</span>
+    <span class="ja">教育機関向けサービス</span>
+  </h2>
+  </div>
 
   <p>教育機関への出張授業・講演も承っております。<br>
     生徒や教師の成長をサポートするためのテーマで、モチベーションや自己変革を促進する内容で講演を行っています。<br><br>

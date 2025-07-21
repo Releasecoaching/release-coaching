@@ -4,41 +4,44 @@
   <meta charset="utf-8">
   <title>Release Coaching</title>
   <style>
-  .section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
-  }
-
-  .content-row {
+  .profile-section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 20px;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
   }
 
-  .content-row img {
-    width: 200px;
+  .profile-section img {
+    width: 150px;
     height: auto;
     border-radius: 50%;
   }
 
-  .content-row p {
-    max-width: 600px;
+  .profile-text {
+    flex: 1;
+    min-width: 200px;
   }
 
-  @media (min-width: 768px) {
-    .content-row {
-      flex-direction: row;
-      justify-content: center;
-      align-items: flex-start;
+  /* スマホ表示用の調整 */
+  @media (max-width: 600px) {
+    .profile-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
-    .content-row p {
-      text-align: left;
+    .profile-section img {
+      width: 120px;
+    }
+
+    .profile-text {
+      text-align: center;
     }
   }
   </style>
+
 
   <meta name="description" content="苫米地式コーチング認定コーチ補の西口皓輝です。">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -80,12 +83,9 @@
 
 <section id="Profile" class="wrapper">
   <h2 class="section-title">
-    <span class="en">Profile</span>
-    <span class="ja">プロフィール</span>
-  </h2>
-  <div class="profile-img">
-    <img src="profile.jpg" alt="ビジョン">
-  </div>
+  <img src="profile.jpg" alt="プロフィール画像">
+  <div class="profile-section">
+    <h2>Profile</h2>
     <p>
         苫米地式コーチング認定コーチの西口皓輝です。<br>
         高校教師として教育現場に携わりながら、自己変革の重要性に気づき、コーチングを通じて人々が自らの可能性を最大限に引き出すサポートをしています。<br><br>

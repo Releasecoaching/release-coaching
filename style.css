@@ -95,13 +95,25 @@ body {
   color: #666;
 }
 
-/* プロフィール画像と文章を横に並べる設定 */
+/* サービスリスト */
+.service-list {
+  list-style: none;
+  padding: 0;
+}
+
+.service-list li {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
 .profile-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   align-items: center;
-  justify-content: center; /* 横並びに中央寄せ */
+  justify-content: center;  /* 横並びに中央寄せ */
 }
 
 .profile-img {
@@ -180,4 +192,48 @@ body {
   padding: 20px;
   font-size: 0.9rem;
   color: #999;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .service-list li {
+    flex-direction: column;  /* スマホ用に縦並びに */
+    gap: 10px; /* 画像とテキストの間隔調整 */
+  }
+
+  .service-list .img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .service-list .detail {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* サービスリストの横並び */
+  .service-list li {
+    display: flex;
+    gap: 20px;  /* 画像とテキストの間にスペースを設ける */
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+  }
+
+  .service-list .img {
+    flex: 0 0 40%; /* 画像が占める幅 */
+  }
+
+  .service-list .img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .service-list .detail {
+    flex: 1;
+    font-size: 1.1rem;
+  }
 }

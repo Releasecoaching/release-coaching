@@ -100,10 +100,13 @@ body {
 /* PC：横並び */
 @media (min-width: 768px) {
   #Profile {
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 40px 20px;
   }
+
 
   #Profile .profile-img {
     display: flex;

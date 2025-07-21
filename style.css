@@ -107,7 +107,6 @@ body {
 
   #Profile .profile-img {
     display: flex;
-    max-width: 1200px;
     width: 100%;
     flex-direction: row;
     align-items: center;

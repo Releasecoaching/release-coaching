@@ -453,32 +453,67 @@ body {
   font-weight: normal;
   max-width: 500px;
 }
+  
+/* ▼ PC表示（768px以上）のレイアウト設定 ▼ */
+@media (min-width: 768px) {
+  .main-visual {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
 
-  @media screen and (max-width: 768px) {
+  .main-visual-text {
+    flex: 1;
+    text-align: left;
+  }
+
+  .main-visual img {
+    max-width: 50%;
+    height: auto;
+  }
+
   #Profile .profile-img {
-    flex-direction: row; /* 横並びに変更 */
+    display: flex;              /* ← 横並びに必要 */
+    flex-direction: row;        /* 横並び */
     justify-content: center;
-    text-align: left; /* 左寄せにする */
+    align-items: center;
+    text-align: left;
+    gap: 20px;                  /* 画像と文章の間に余白 */
   }
 
   #Profile .profile-img img {
-    margin-right: 30px; /* 画像とテキストの間に余白を追加 */
-    margin-bottom: 0;   /* 下の余白を削除 */
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin: 0;
   }
 
   #Profile .profile-text {
     font-size: 18px;
+    max-width: 500px;
   }
 }
 
-  .detail {
-    text-align: center;
-    font-size: 1rem;
-  }
-
-  .contact-image {
-    width: 100%;
-    max-width: 100%;
-  }
+/* ▼ スマホなど768px未満では今のまま維持する場合の基本スタイル ▼ */
+#Profile .profile-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 20px;
+  text-align: center;
 }
 
+#Profile .profile-img img {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+#Profile .profile-text {
+  font-size: 16px;
+  font-weight: normal;
+  max-width: 500px;
+  text-align: center;
+}

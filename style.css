@@ -98,19 +98,20 @@ body {
 /* プロフィール画像と文章を横に並べるための設定 */
 .profile-wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* 画像とテキストが折り返さないようにします */
   gap: 20px;
   align-items: center;
 }
 
 .img {
-  flex: 0 0 40%;
+  flex: 0 0 40%; /* 画像が占める幅を40%に設定 */
+  display: block;
 }
 
 .img img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 8px; /* 画像の角を丸く */
 }
 
 .detail {

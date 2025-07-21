@@ -108,26 +108,28 @@ body {
   border-radius: 8px;
 }
 
-/* プロフィール画像と文章を横に並べるための設定 */
-#Profile .profile-img {
+.profile-wrapper {
   display: flex;
-  flex-direction: column; /* スマホでは縦並びにする */
+  flex-wrap: wrap;
+  gap: 20px;
   align-items: center;
-  margin: 40px 20px;
-  text-align: center;
+  justify-content: center;  /* 横並びに中央寄せ */
 }
 
-#Profile .profile-img img {
-  width: 200px;  /* 画像のサイズ */
+.profile-img {
+  flex: 0 0 auto; /* 画像のサイズを固定せずに親要素のサイズに合わせる */
+}
+
+.profile-img img {
+  width: 300px;  /* PC用の画像サイズを指定 */
   height: auto;
   border-radius: 50%;
   margin-bottom: 20px;
 }
 
-#Profile .profile-text {
-  font-size: 16px;
-  font-weight: normal;
-  max-width: 500px;
+.detail {
+  flex: 1;
+  font-size: 1.1rem;
 }
 
 /* PC表示：横並び */
@@ -452,10 +454,10 @@ body {
     width: 300px;  /* PC用の画像サイズを指定 */
     height: auto;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 0; /* 下の余白を削除 */
   }
 
-.content-block {
+  .content-block {
     display: flex;
     align-items: center;
     gap: 2rem;

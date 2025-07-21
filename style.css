@@ -103,16 +103,11 @@ body {
   align-items: center;
 }
 
-.img {
-  flex: 0 0 40%;
-}
-
-.img img {
-  width: 100%;
+img {
+  max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  display: block;
 }
-
 .detail {
   flex: 1;
   font-size: 1.1rem;
@@ -134,7 +129,7 @@ body {
 /* flowとcontactセクションの画像サイズ調整 */
 .flow-image, .contact img {
   width: 100%;
-  max-width: 600px;
+  max-width: 100%;
   height: auto;
   border-radius: 8px;
   margin: 20px 0;

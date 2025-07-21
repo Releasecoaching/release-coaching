@@ -76,22 +76,23 @@ nav ul li a:hover {
 /* プロフィール */
 .profile {
   display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  padding: 40px 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap; /* スマホ用に折り返し可能 */
 }
 
 .profile img {
-  flex: 0 0 150px;
   width: 150px;
   height: auto;
-  border-radius: 8px;
+  border-radius: 50%;
 }
 
 .profile-text {
-  flex: 1;
-  font-size: 1.1rem;
+  max-width: 400px;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* サービス */
@@ -200,16 +201,20 @@ nav ul li a:hover {
     padding: 0.5rem 0;
   }
 
-  .profile {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+ .profile {
+    flex-direction: row; /* スマホでも横並びを維持 */
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .profile img {
+    width: 120px;
   }
 
   .profile-text {
-    text-align: left;
-    width: 100%;
+    font-size: 0.95rem; /* 少し小さくして読みやすく */
   }
+}
 
   .service-list li {
     flex-direction: column;

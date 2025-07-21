@@ -226,6 +226,8 @@ nav ul li a:hover {
 
   .profile-text {
     font-size: 0.95rem;
+    max-width: 90%;
+    margin: 0 auto;
   }
 
   .catchphrase {

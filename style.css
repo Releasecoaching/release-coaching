@@ -132,7 +132,7 @@ nav ul li a:hover {
 }
 
 /* flow/contact画像 */
-.flow-image, .contact-image {
+.flow-image, .contact-image, .vision-img img {
   width: 100%;
   max-width: 600px;
   height: auto;
@@ -171,6 +171,14 @@ nav ul li a:hover {
 .section-title .ja {
   font-size: 1rem;
   color: #666;
+}
+
+/* For School セクション */
+.for-school {
+  background-color: #f1f1f1;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 3rem;
 }
 
 /* フッター */
@@ -217,4 +225,22 @@ nav ul li a:hover {
   }
 
   .profile-text {
-    font-size:
+    font-size: 0.95rem;
+  }
+
+  .catchphrase {
+    font-size: 1.4rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .service-list li {
+    flex-direction: column;
+  }
+
+  .service-list .img, .service-list .detail {
+    width: 100%;
+  }
+}

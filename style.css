@@ -107,7 +107,7 @@ body {
   background: #f9f9f9;
   border-radius: 8px;
 }
-
+/*　プロフィール部分 */
 .profile-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -121,7 +121,7 @@ body {
 }
 
 .profile-img img {
-  width: 300px;  /* PC用の画像サイズを指定 */
+  width: 200px;  /* スマホ用画像サイズ */
   height: auto;
   border-radius: 50%;
   margin-bottom: 20px;
@@ -135,20 +135,25 @@ body {
 /* PC表示：横並び */
 @media (min-width: 768px) {
   #Profile .profile-img {
-    flex-direction: row; /* 横並びに変更 */
+    display: flex;           /* 横並びに変更 */
+    flex-direction: row;     /* 横並び */
     justify-content: center;
-    text-align: left; /* 左寄せにする */
+    align-items: center;
+    text-align: left;
   }
 
   #Profile .profile-img img {
-    margin-right: 30px; /* 画像とテキストの間に余白を追加 */
-    margin-bottom: 0;   /* 下の余白を削除 */
+    width: 300px;  /* PC用画像サイズ */
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 0; /* 下の余白を削除 */
   }
 
   #Profile .profile-text {
     font-size: 18px;
   }
 }
+
 
 /* flowとcontactセクションの画像サイズ調整 */
 .flow-image, .contact img {
@@ -438,6 +443,7 @@ body {
     font-size: 18px;
   }
 }
+
 
 /* スマホ表示はそのまま */
 @media screen and (max-width: 768px) {

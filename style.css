@@ -294,16 +294,18 @@ body {
   flex-wrap: wrap;
   gap: 20px;
   align-items: center;
+  justify-content: center;
 }
 
 .profile-img {
-  flex: 0 0 40%;
+  flex: 0 0 auto; /* 画像の幅を親要素に合わせる */
 }
 
 .profile-img img {
-  width: 100%;
+  width: 200px;  /* スマホ用画像サイズ */
   height: auto;
-  border-radius: 8px;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 .detail {
@@ -416,61 +418,48 @@ body {
 }
 
 /* レスポンシブ対応 */
-@media screen and (max-width: 768px) {
-  .nav ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .logo img {
-    height: 40px;  /* ロゴ画像が大きすぎる場合の調整 */
-  }
-
-  .wrapper {
-    padding: 20px 10px;
-  }
-
-  .mainvisual img {
-    width: 100%;
-    height: auto;
-  }
-#Profile .profile-img {
-  display: flex;
-  flex-direction: column; /* スマホでは縦並びにする */
-  align-items: center;
-  margin: 40px 20px;
-  text-align: center;
-}
-
-
-#Profile .profile-text {
-  font-size: 16px;
-  font-weight: normal;
-  max-width: 500px;
-}
 @media (min-width: 768px) {
+  #Profile .profile-img {
+    display: flex;           /* 横並びに変更 */
+    flex-direction: row;     /* 横並び */
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+
   #Profile .profile-img img {
-    width: 300px;  /* PC用の画像サイズを指定 */
+    width: 300px;  /* PC用画像サイズ */
     height: auto;
     border-radius: 50%;
     margin-bottom: 0; /* 下の余白を削除 */
   }
 
-  .content-block {
-    display: flex;
+  #Profile .profile-text {
+    font-size: 18px;
+  }
+}
+
+/* スマホ表示はそのまま */
+@media screen and (max-width: 768px) {
+  #Profile .profile-img {
+    display: flex;  /* 縦並びにしない */
+    flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    margin: 40px 20px;
+    text-align: center;
   }
 
-  .content-block .text,
-  .content-block .image {
-    flex: 1;
-  }
-
-  .content-block .image img {
-    width: 100%;   /* 親要素にフィットさせる */
+  #Profile .profile-img img {
+    width: 200px;  /* スマホ用画像サイズ */
     height: auto;
-    display: block;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  #Profile .profile-text {
+    font-size: 16px;
+    font-weight: normal;
+    max-width: 500px;
+    text-align: center;
   }
 }

@@ -1,3 +1,4 @@
+/* 基本スタイル */
 html, body {
   margin: 0;
   padding: 0;
@@ -78,19 +79,22 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
   padding: 2rem;
-  gap: 1rem;
-  flex-wrap: wrap; /* スマホ用に折り返し可能 */
+  flex-wrap: wrap;
 }
 
 .profile img {
   width: 150px;
   height: auto;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .profile-text {
-  max-width: 400px;
+  flex: 1;
+  min-width: 200px;
+  max-width: 600px;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -201,38 +205,16 @@ nav ul li a:hover {
     padding: 0.5rem 0;
   }
 
- .profile {
-    flex-direction: row; /* スマホでも横並びを維持 */
-    align-items: flex-start;
-    text-align: left;
+  .profile {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1rem;
   }
 
   .profile img {
     width: 120px;
+    margin-bottom: 1rem;
   }
 
   .profile-text {
-    font-size: 0.95rem; /* 少し小さくして読みやすく */
-  }
-}
-
-  .service-list li {
-    flex-direction: column;
-  }
-
-  .service-list .img {
-    width: 100%;
-  }
-
-  .service-list .detail {
-    width: 100%;
-  }
-
-  .catchphrase {
-    font-size: 1.4rem;
-  }
-
-  .text {
-    font-size: 1rem;
-  }
-}
+    font-size:

@@ -1,29 +1,30 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* 横スクロールを防ぐ */
-  width: 100%;
+  overflow-x: hidden;
   font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", sans-serif;
   color: #333;
   background: #fff;
   line-height: 1.8;
-}  
+}
 
+/* 全体ラッパー */
 .wrapper {
-  max-width: 100%; /* 最大幅を100%に設定 */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-  box-sizing: border-box; /* 余計な横スクロールを防ぐ */
+  box-sizing: border-box;
 }
 
 /* ヘッダー */
-#header {
-  background-color: #f5f5f5;
-  padding: 10px 20px;
+header {
+  background-color: #ffffff;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ccc;
 }
 
 .logo img {
@@ -31,20 +32,20 @@ html, body {
 }
 
 nav ul {
-  display: flex;
-  flex-wrap: wrap;
   list-style: none;
+  display: flex;
+  gap: 20px;
   padding: 0;
   margin: 0;
 }
 
-.nav a {
+nav ul li a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
 }
 
-.nav a:hover {
+nav ul li a:hover {
   color: #0077cc;
 }
 
@@ -72,237 +73,67 @@ nav ul {
   font-size: 1.1rem;
 }
 
-/* セクション */
-.section-title {
-  font-size: 1.5rem;
-  border-bottom: 2px solid #0077cc;
-  margin-bottom: 20px;
-  padding-bottom: 5px;
-}
-
-.section-title .en {
-  font-weight: bold;
-  font-size: 1.2rem;
-  display: block;
-  color: #0077cc;
-}
-
-.section-title .ja {
-  font-size: 1rem;
-  color: #666;
-}
-
-/* プロフィール画像と文章を横に並べるための設定 */
-.profile-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-.detail {
-  flex: 1;
-  font-size: 1.1rem;
-}
-
-/* サービスリスト */
-.service-list {
-  list-style: none;
-  padding: 0;
-}
-
-.service-list li {
-  margin-bottom: 30px;
-  padding: 20px;
-  background: #f9f9f9;
-  border-radius: 8px;
-}
-
-/* flowとcontactセクションの画像サイズ調整 */
-.flow-image, .contact-image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin: 20px 0;
-}
-
-/* フッター */
-#footer {
-  background-color: #f0f0f0;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  color: #999;
-}
-
-/* レスポンシブ対応 */
-@media screen and (max-width: 768px) {
-  .nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .logo img {
-    height: 40px;
-  }
-
-  .wrapper {
-    padding: 20px 10px;
-  }
-
-  /* プロフィール画像のサイズ調整 */
-  .profile-wrapper {
-    flex-direction: column;
-  }
-
-  .img {
-    flex: 0 0 100%;
-    margin-bottom: 20px;
-  }
-
-  .detail {
-    flex: 0 0 100%;
-  }
-}
-body {
-  font-family: 'Helvetica Neue', sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-
-/* ヘッダー */
-header {
-  background-color: #ffffff;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  border-bottom: 1px solid #ccc;
-}
-
-.logo img {
-  height: 60px;
-}
-
-.nav ul {
-  list-style: none;
+/* プロフィール */
+.profile {
   display: flex;
   gap: 20px;
-  padding: 0;
-  margin: 0;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-.nav a:hover {
-  color: #0077cc;
-}
-
-/* メインビジュアル */
-.mainvisual img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;  /* 画像が枠内にフィットするようにする */
-  border-radius: 8px;
-}
-
-/* キャッチコピー */
-.introduction {
-  text-align: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
   padding: 40px 20px;
 }
 
-.catchphrase {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.text {
-  font-size: 1.1rem;
-}
-
-/* セクション */
-.section-title {
-  font-size: 1.5rem;
-  border-bottom: 2px solid #0077cc;
-  margin-bottom: 20px;
-  padding-bottom: 5px;
-}
-
-.section-title .en {
-  font-weight: bold;
-  font-size: 1.2rem;
-  display: block;
-  color: #0077cc;
-}
-
-.section-title .ja {
-  font-size: 1rem;
-  color: #666;
-}
-
-/* プロフィール画像と文章を横に並べるための設定 */
-.profile {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 2rem;
-}
-
 .profile img {
-  max-width: 100%;
+  flex: 0 0 150px;
   width: 150px;
+  height: auto;
   border-radius: 8px;
 }
 
 .profile-text {
   flex: 1;
-  min-width: 200px;
+  font-size: 1.1rem;
 }
 
-/* サービスリスト */
+/* サービス */
 .service-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .service-list li {
-  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 20px;
   background: #f9f9f9;
   border-radius: 8px;
+  margin-bottom: 30px;
 }
 
-/* フローリスト */
-.flow-list {
-  list-style: none;
-  counter-reset: number;
-  padding-left: 0;
+.service-list .img {
+  flex: 0 0 40%;
 }
 
-.flow-list li {
-  margin-bottom: 20px;
-  background: #eef5ff;
-  padding: 15px;
-  border-left: 5px solid #0077cc;
-  border-radius: 4px;
+.service-list .img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.service-list .detail {
+  flex: 1;
+  font-size: 1.1rem;
+}
+
+/* flow/contact画像 */
+.flow-image, .contact-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px auto;
+  display: block;
 }
 
 /* LINEボタン */
@@ -314,7 +145,27 @@ header {
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 1rem;
+  margin: 1rem 0;
+}
+
+/* セクションタイトル */
+.section-title {
+  font-size: 1.5rem;
+  border-bottom: 2px solid #0077cc;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+
+.section-title .en {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #0077cc;
+  display: block;
+}
+
+.section-title .ja {
+  font-size: 1rem;
+  color: #666;
 }
 
 /* フッター */
@@ -326,59 +177,7 @@ header {
   color: #999;
 }
 
-/* 画像調整 */
-.img img,
-.vision-img img,
-.service-list img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;  /* 角を丸くしたい場合 */
-}
-
-/* flowセクションの画像サイズ調整 */
-.flow-image {
-  width: 100%; /* 画像を100%の幅に設定 */
-  height: auto;
-  border-radius: 8px;
-  margin: 20px 0;
-}
-
-/* serviceセクションの画像とテキストを横並びに */
-.service-list li {
-  display: flex;
-  gap: 20px; /* 画像とテキストの間にギャップを設定 */
-  margin-bottom: 30px;
-  padding: 20px;
-  background: #f9f9f9;
-  border-radius: 8px;
-}
-
-.service-list .img {
-  flex: 0 0 40%; /* 画像が占める幅を40%に設定 */
-}
-
-.service-list .img {
-  width: 100%; /* 画像を親要素にフィットさせる */
-  height: auto;
-  border-radius: 8px;
-}
-
-.service-list .detail {
-  flex: 1; /* テキストが占める幅を残りの60%に設定 */
-  font-size: 1.1rem;
-}
-
-
-.contact-image {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 8px;
-  display: block;
-  margin: 0 auto 20px auto;
-}
-
-/* レスポンシブ対応 */
+/* ========== レスポンシブ対応 ========== */
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
@@ -387,7 +186,18 @@ header {
 
   nav ul {
     flex-direction: column;
+    gap: 10px;
     width: 100%;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    text-align: center;
+    padding: 0.5rem 0;
   }
 
   .profile {
@@ -401,13 +211,23 @@ header {
     width: 100%;
   }
 
-  nav ul li {
+  .service-list li {
+    flex-direction: column;
+  }
+
+  .service-list .img {
     width: 100%;
   }
 
-  nav ul li a {
-    display: block;
+  .service-list .detail {
     width: 100%;
-    text-align: center;
+  }
+
+  .catchphrase {
+    font-size: 1.4rem;
+  }
+
+  .text {
+    font-size: 1rem;
   }
 }

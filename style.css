@@ -96,28 +96,33 @@ body {
 }
 
 /* プロフィール画像と文章を横に並べるための設定 */
+/* プロフィール画像と文章を横に並べるための設定 */
 .profile-wrapper {
-  display: flex;
-  flex-wrap: nowrap; /* 画像とテキストが折り返さないようにします */
-  gap: 20px;
-  align-items: center;
+  display: flex;         /* 横並びにするためにFlexboxを使用 */
+  gap: 20px;             /* 画像とテキストの間にスペースを確保 */
+  align-items: center;   /* 垂直方向で中央揃え */
+  justify-content: flex-start; /* 左寄せにする */
+  flex-wrap: wrap;       /* 画面幅に応じて折り返し */
 }
 
+/* 画像 */
 .img {
-  flex: 0 0 40%; /* 画像が占める幅を40%に設定 */
-  display: block;
+  flex: 0 0 40%;         /* 画像の幅を親の40%に設定 */
+  display: block;        /* 画像をブロック要素として表示 */
 }
 
 .img img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px; /* 画像の角を丸く */
+  width: 100%;           /* 画像を親要素にフィットさせる */
+  height: auto;          /* アスペクト比を保つ */
+  border-radius: 8px;    /* 画像の角を丸く */
 }
 
+/* テキスト */
 .detail {
-  flex: 1;
-  font-size: 1.1rem;
+  flex: 1;               /* 残りのスペースをテキストに割り当て */
+  font-size: 1.1rem;     /* フォントサイズの設定 */
 }
+
 
 /* サービスリスト */
 .service-list {

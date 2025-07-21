@@ -95,35 +95,6 @@ body {
   color: #666;
 }
 
-/* プロフィール画像と文章を横に並べるための設定 */
-/* プロフィール画像と文章を横に並べるための設定 */
-.profile-wrapper {
-  display: flex;         /* 横並びにするためにFlexboxを使用 */
-  gap: 20px;             /* 画像とテキストの間にスペースを確保 */
-  align-items: center;   /* 垂直方向で中央揃え */
-  justify-content: flex-start; /* 左寄せにする */
-  flex-wrap: wrap;       /* 画面幅に応じて折り返し */
-}
-
-/* 画像 */
-.img {
-  flex: 0 0 40%;         /* 画像の幅を親の40%に設定 */
-  display: block;        /* 画像をブロック要素として表示 */
-}
-
-.img img {
-  width: 100%;           /* 画像を親要素にフィットさせる */
-  height: auto;          /* アスペクト比を保つ */
-  border-radius: 8px;    /* 画像の角を丸く */
-}
-
-/* テキスト */
-.detail {
-  flex: 1;               /* 残りのスペースをテキストに割り当て */
-  font-size: 1.1rem;     /* フォントサイズの設定 */
-}
-
-
 /* サービスリスト */
 .service-list {
   list-style: none;
@@ -135,6 +106,46 @@ body {
   padding: 20px;
   background: #f9f9f9;
   border-radius: 8px;
+}
+
+/* プロフィール画像と文章を横に並べるための設定 */
+#Profile .profile-img {
+  display: flex;
+  flex-direction: column; /* スマホでは縦並びにする */
+  align-items: center;
+  margin: 40px 20px;
+  text-align: center;
+}
+
+#Profile .profile-img img {
+  width: 200px;  /* 画像のサイズ */
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+#Profile .profile-text {
+  font-size: 16px;
+  font-weight: normal;
+  max-width: 500px;
+}
+
+/* PC表示：横並び */
+@media (min-width: 768px) {
+  #Profile .profile-img {
+    flex-direction: row; /* 横並びに変更 */
+    justify-content: center;
+    text-align: left; /* 左寄せにする */
+  }
+
+  #Profile .profile-img img {
+    margin-right: 30px; /* 画像とテキストの間に余白を追加 */
+    margin-bottom: 0;   /* 下の余白を削除 */
+  }
+
+  #Profile .profile-text {
+    font-size: 18px;
+  }
 }
 
 /* flowとcontactセクションの画像サイズ調整 */

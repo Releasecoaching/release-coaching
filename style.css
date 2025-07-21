@@ -28,9 +28,14 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
+.logo {
+  margin-right: auto; /* ロゴを左に固定 */
+}
 
 .logo img {
   height: 60px;
+  width: auto; /* 縦横比保持 */
+  max-width: 200px; /* 必要に応じて制限 */
 }
 
 .nav ul {
@@ -92,6 +97,50 @@ body {
   font-size: 1rem;
   color: #666;
 }
+/* PC：横並び */
+@media (min-width: 768px) {
+  #Profile .profile-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+
+  #Profile .profile-img img {
+    width: 200px;
+    height: auto;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  #Profile .profile-text {
+    font-size: 18px;
+    max-width: 500px;
+  }
+}
+
+/* スマホ：縦並び */
+@media (max-width: 767px) {
+  #Profile .profile-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #Profile .profile-img img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  #Profile .profile-text {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}
 
  /* サービスリストの画像 */
   .service-list img,
@@ -133,56 +182,25 @@ body {
     flex: 1; /* テキストが残りのスペースを占める */
     font-size: 1.1rem;
   }
-}
 
-/* プロフィール画像と文章を横に並べるための設定 */
-#Profile .profile-img {
-  display: flex;
-  flex-direction: column; /* スマホでは縦並びにする */
-  align-items: center;
-  margin: 40px 20px;
-  text-align: center;
-}
-
-#Profile .profile-img img {
-  width: 200px;  /* 画像のサイズ */
-  height: auto;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-#Profile .profile-text {
-  font-size: 16px;
-  font-weight: normal;
-  max-width: 500px;
-}
-
-/* PC表示：横並び */
-@media (min-width: 768px) {
-  #Profile .profile-img {
-    flex-direction: row; /* 横並びに変更 */
-    justify-content: center;
-    text-align: left; /* 左寄せにする */
-  }
-
-  #Profile .profile-img img {
-    margin-right: 30px; /* 画像とテキストの間に余白を追加 */
-    margin-bottom: 0;   /* 下の余白を削除 */
-  }
-
-  #Profile .profile-text {
-    font-size: 18px;
-  }
-}
 
 /* flowとcontactセクションの画像サイズ調整 */
-.flow-image, .contact img {
+.flow-image {
   width: 100%;
-  max-width: 600px;
   height: auto;
-  border-radius: 8px;
-  margin: 20px 0;
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
 }
+
+.contact img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  display: block;
+  margin: 20px auto;
+}
+
 
 /* フッター */
 #footer {
@@ -191,177 +209,6 @@ body {
   padding: 20px;
   font-size: 0.9rem;
   color: #999;
-}
-
-/* レスポンシブ対応 */
-@media screen and (max-width: 768px) {
-  .nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .logo img {
-    height: 40px;
-  }
-
-  .wrapper {
-    padding: 20px 10px;
-  }
-
-  /* プロフィール画像のサイズ調整 */
-  .profile-wrapper {
-    flex-direction: column;
-  }
-
-  .img {
-    flex: 0 0 100%;
-    margin-bottom: 20px;
-  }
-
-  .detail {
-    flex: 0 0 100%;
-  }
-}
-body {
-  font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", sans-serif;
-  color: #333;
-  background: #fff;
-  line-height: 1.8;
-  margin: 0;
-  padding: 0;
-}
-
-.wrapper {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-/* ヘッダー */
-#header {
-  background-color: #f5f5f5;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.logo img {
-  height: 60px;
-}
-
-.nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-.nav a:hover {
-  color: #0077cc;
-}
-
-/* メインビジュアル */
-.mainvisual img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;  /* 画像が枠内にフィットするようにする */
-  border-radius: 8px;
-}
-
-/* キャッチコピー */
-.introduction {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.catchphrase {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.text {
-  font-size: 1.1rem;
-}
-
-/* セクション */
-.section-title {
-  font-size: 1.5rem;
-  border-bottom: 2px solid #0077cc;
-  margin-bottom: 20px;
-  padding-bottom: 5px;
-}
-
-.section-title .en {
-  font-weight: bold;
-  font-size: 1.2rem;
-  display: block;
-  color: #0077cc;
-}
-
-.section-title .ja {
-  font-size: 1rem;
-  color: #666;
-}
-
-/* プロフィール画像と文章を横に並べるための設定 */
-.profile-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
-}
-
-.profile-img {
-  flex: 0 0 40%;
-}
-
-.profile-img img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.detail {
-  flex: 1;
-  font-size: 1.1rem;
-}
-
-/* サービスリスト */
-.service-list {
-  list-style: none;
-  padding: 0;
-}
-
-.service-list li {
-  margin-bottom: 30px;
-  padding: 20px;
-  background: #f9f9f9;
-  border-radius: 8px;
-}
-
-/* フローリスト */
-.flow-list {
-  list-style: none;
-  counter-reset: number;
-  padding-left: 0;
-}
-
-.flow-list li {
-  margin-bottom: 20px;
-  background: #eef5ff;
-  padding: 15px;
-  border-left: 5px solid #0077cc;
-  border-radius: 4px;
 }
 
 /* LINEボタン */
@@ -378,15 +225,6 @@ body {
 
 .line-button:hover {
   background-color: #05b04e;
-}
-
-/* フッター */
-#footer {
-  background-color: #f0f0f0;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  color: #999;
 }
 
 /* 画像調整 */
@@ -437,45 +275,4 @@ body {
   border-radius: 8px;
   display: block;
   margin: 0 auto 20px auto;
-}
-
-/* レスポンシブ対応 */
-@media screen and (max-width: 768px) {
-  .nav ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .logo img {
-    height: 40px;  /* ロゴ画像が大きすぎる場合の調整 */
-  }
-
-  .wrapper {
-    padding: 20px 10px;
-  }
-
-  .mainvisual img {
-    width: 100%;
-    height: auto;
-  }
-#Profile .profile-img {
-  display: flex;
-  flex-direction: column; /* スマホでは縦並びにする */
-  align-items: center;
-  margin: 40px 20px;
-  text-align: center;
-}
-
-#Profile .profile-img img {
-  width: 200px;  /* 画像のサイズ */
-  height: auto;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-#Profile .profile-text {
-  font-size: 16px;
-  font-weight: normal;
-  max-width: 500px;
 }

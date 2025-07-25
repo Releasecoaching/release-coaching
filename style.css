@@ -168,7 +168,7 @@ body {
   }
 
   .service-list .img {
-    flex: 0 0 40%; /* 画像の幅を40%に設定 */
+    flex: 0 0 30%; /* 画像の幅を40%に設定 */
   }
 
   .service-list .img img {

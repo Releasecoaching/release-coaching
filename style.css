@@ -161,13 +161,6 @@ body {
 
   /* サービスリストとフローの画像の間隔調整 */
  /* Serviceセクション専用のスタイル */
-#Service .service-list .title {
-  margin: 0;
-  text-align: left;
-  flex-shrink: 0; /* タイトルが潰れないように */
-}
-
-
 #Service .service-list li {
   display: flex;
   gap: 20px;
@@ -179,7 +172,7 @@ body {
 }
 
 #Service .service-list .img {
-  flex: 0 0 25%; /* 固定幅 */
+  flex: 0 0 25%; /* 画像の幅を設定 */
 }
 
 #Service .service-list .img img {
@@ -191,22 +184,26 @@ body {
 #Service .service-list .detail {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column; /* タイトルと説明文を縦に並べる */
+  justify-content: flex-start; /* 左寄せにする */
 }
 
 #Service .service-list .detail h3 {
   font-size: 1.4rem;
   margin: 0 0 10px;
-  white-space: normal;        /* ← 折り返しを許可 */
-  overflow: visible;          /* ← はみ出しても隠さない */
-  text-overflow: unset;       /* ← ...を無効に */
-  word-break: break-word;     /* ← 単語が長くても折り返す */
+  text-align: left; /* タイトルを左寄せ */
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  word-break: break-word;
 }
-
 
 #Service .service-list .detail p {
   font-size: 1.1rem;
   margin: 0;
   line-height: 1.6;
+  text-align: left; /* 説明文を左寄せ */
 }
 
 

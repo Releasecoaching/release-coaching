@@ -158,7 +158,8 @@ body {
   }
 
   /* サービスリストとフローの画像の間隔調整 */
- .service-list li {
+ /* Serviceセクション専用のスタイル */
+#Service .service-list li {
   display: flex;
   gap: 20px;
   margin-bottom: 30px;
@@ -168,34 +169,32 @@ body {
   align-items: flex-start;
 }
 
-.service-list .img {
-  flex: 0 0 25%; /* 画像幅を25%に固定 */
+#Service .service-list .img {
+  flex: 0 0 25%; /* 固定幅 */
 }
 
-.service-list .img img {
+#Service .service-list .img img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.service-list .detail {
-  flex: 1; /* 残りすべてを使う */
-  min-width: 0; /* ← これが重要！省略不可 */
+#Service .service-list .detail {
+  flex: 1;
+  min-width: 0;
 }
 
-.service-list .detail h3 {
+#Service .service-list .detail h3 {
   font-size: 1.3rem;
   margin: 0 0 10px;
-  white-space: nowrap; /* 改行させない */
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-.service-list .detail p {
+#Service .service-list .detail p {
   font-size: 1.1rem;
   margin: 0;
   line-height: 1.6;
 }
+
 
 /* flowとcontactセクションの画像サイズ調整 */
 .flow-image {

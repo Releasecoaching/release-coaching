@@ -114,11 +114,6 @@ body {
     height: auto;
     flex-shrink: 0;
   }
-
-  #Profile .profile-text {
-    font-size: 18px;
-    max-width: 800px;
-  }
 }
 
 /* スマホ：縦並び */
@@ -144,8 +139,9 @@ body {
 }
 
  /* サービスリストの画像 */
+  .vision img,
   .service-list img,
-  .flow-image,
+  .flow image,
   .contact img {
    width: 100%;
   height: auto;

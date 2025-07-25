@@ -161,6 +161,13 @@ body {
 
   /* サービスリストとフローの画像の間隔調整 */
  /* Serviceセクション専用のスタイル */
+#Service .service-list .title {
+  margin: 0;
+  text-align: left;
+  flex-shrink: 0; /* タイトルが潰れないように */
+}
+
+
 #Service .service-list li {
   display: flex;
   gap: 20px;

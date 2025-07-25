@@ -156,11 +156,12 @@ body {
   .service-list img,
   .flow-image,
   .contact img {
-    width: 100%;  /* 親要素にフィット */
-    height: auto;  /* 縦横比を保つ */
-    max-width: 600px;  /* 最大幅を設定して過度に大きくならないように調整 */
-    margin: 20px auto;  /* 画像の周りに余白 */
-  }
+   width: 100%;
+  height: auto;
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
+}
 
   /* 画像のスタイル（共通） */
   img {
@@ -201,6 +202,24 @@ body {
   max-width: 600px;
   display: block;
   margin: 20px auto;
+}
+
+.detail {
+  display: flex;
+  justify-content: center;
+}
+
+.flow-list {
+  padding-left: 1.5em; /* 箇条書きの数字分 */
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.flow-list li {
+  margin-bottom: 1.5em;
 }
 
 .contact img {

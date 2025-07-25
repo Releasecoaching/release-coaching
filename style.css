@@ -189,16 +189,14 @@ body {
 #Service .service-list .detail h3 {
   font-size: 1.4rem;
   margin: 0 0 10px;
-  text-align: left; /* タイトルを左寄せ */
-  margin-bottom: 20px; /* タイトルと本文の間隔を広げる */
-  word-break: break-word;
+  text-align: left;
 }
 
 #Service .service-list .detail p {
   font-size: 1.1rem;
   margin: 0;
   line-height: 1.6;
-  text-align: right; /* 説明文を左寄せ */
+  text-align: right; /* 説明文を右寄せ */
 }
 
 
@@ -213,7 +211,7 @@ body {
 
 .detail {
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
 
 .flow-list {

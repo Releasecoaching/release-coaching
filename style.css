@@ -163,7 +163,7 @@ body {
   }
 
   /* サービスリストとフローの画像の間隔調整 */
- /* Serviceセクション専用のスタイル */
+ /* Serviceセクション専用のスタイル *//* PC用（デフォルト） */
 #Service .service-list li {
   display: flex;
   gap: 20px;
@@ -175,32 +175,48 @@ body {
 }
 
 #Service .service-list .img {
-  flex: 0 0 25%; /* 画像の幅を設定 */
-}
-
-#Service .service-list .img img {
-  width: 100%;
-  height: auto;
-  display: block;
+  flex: 0 0 25%; /* PCでは画像は横幅25% */
 }
 
 #Service .service-list .detail {
   flex: 1;
-  min-width: 0;
+  min-width: 0; /* タイトルや本文が折り返されるのを防ぐ */
 }
 
-#Service .service-list .detail h3 {
+/* スマホ用 */
+@media (max-width: 768px) {
+  #Service .service-list li {
+    flex-direction: column; /* 画像の下にテキストを配置 */
+    align-items: center;
+    text-align: center;
+  }
+
+ #Service .service-list .img img {
+  width: 100%;
+  max-width: 200px; /* これでスマホでも大きすぎない */
+  height: auto;
+}
+
+
+  #Service .service-list .detail {
+    text-align: left; /* スマホでは本文は左寄せに */
+  }
+
+ #Service .service-list .detail h3 {
   font-size: 1.4rem;
   margin: 0 0 10px;
   text-align: left;
+  white-space: normal;   /* 自然な位置で改行 */
+  word-break: break-word; /* 長い単語がはみ出さないように */
 }
 
-#Service .service-list .detail p {
-  font-size: 1.1rem;
-  margin: 0;
-  line-height: 1.6;
-  text-align: right; /* 説明文を右寄せ */
+
+  #Service .service-list .detail p {
+    font-size: 1rem;
+    text-align: left; /* 本文は左揃え */
+  }
 }
+
 
 
 /* flowとcontactセクションの画像サイズ調整 */

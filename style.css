@@ -145,9 +145,9 @@ body {
   .service-list img,
   .flow image,
   .contact img {
-   width: 100%;
+   width: 200px;
   height: auto;
-  max-width: 600px;
+  max-width: 100%;
   display: block;
   margin: 20px auto;
 }

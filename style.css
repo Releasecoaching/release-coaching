@@ -174,48 +174,69 @@ body {
   align-items: flex-start;
 }
 
+/* 左の画像 */
 #Service .service-list .img {
-  flex: 0 0 25%; /* PCでは画像は横幅25% */
+  flex: 0 0 25%;
 }
 
+#Service .service-list .img img {
+  width: 100%;
+  max-width: 200px; /* スマホでも大きすぎないように */
+  height: auto;
+  display: block;
+}
+
+/* 右のテキスト全体 */
 #Service .service-list .detail {
   flex: 1;
-  min-width: 0; /* タイトルや本文が折り返されるのを防ぐ */
+  min-width: 0;
+  display: flex;
+  flex-direction: column; /* タイトルと本文を縦並びに */
+  text-align: right;      /* 全体を右寄せ */
+  gap: 8px;               /* タイトルと本文の間隔 */
 }
+
+/* タイトル */
+#Service .service-list .detail h3 {
+  font-size: 1.4rem;
+  margin: 0;
+  text-align: right; /* 右寄せ */
+}
+
+/* 本文 */
+#Service .service-list .detail p {
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.6;
+  text-align: right; /* 右寄せ */
+}
+
+
 
 /* スマホ用 */
 @media (max-width: 768px) {
   #Service .service-list li {
-    flex-direction: column; /* 画像の下にテキストを配置 */
+    flex-direction: column; /* 縦並び */
     align-items: center;
     text-align: center;
   }
 
- #Service .service-list .img img {
-  width: 100%;
-  max-width: 200px; /* これでスマホでも大きすぎない */
-  height: auto;
-}
-
+  #Service .service-list .img {
+    flex: 0 0 auto;
+    width: 80%;
+    margin-bottom: 15px;
+  }
 
   #Service .service-list .detail {
-    text-align: left; /* スマホでは本文は左寄せに */
+    text-align: center; /* 中央寄せに変更 */
   }
 
- #Service .service-list .detail h3 {
-  font-size: 1.4rem;
-  margin: 0 0 10px;
-  text-align: left;
-  white-space: normal;   /* 自然な位置で改行 */
-  word-break: break-word; /* 長い単語がはみ出さないように */
-}
-
-
+  #Service .service-list .detail h3,
   #Service .service-list .detail p {
-    font-size: 1rem;
-    text-align: left; /* 本文は左揃え */
+    text-align: center; /* タイトルと本文も中央寄せ */
   }
 }
+
 
 
 

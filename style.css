@@ -143,7 +143,10 @@ body {
  /* サービスリストの画像 */
   .vision img,
   .service-list img,
-  .flow image,
+  .flow imag,
+  .dreamsupport img,
+  .tanpopo img,
+  .service img,
   .contact img {
    width: 200px;
   height: auto;

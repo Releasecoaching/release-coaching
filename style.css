@@ -140,20 +140,7 @@ body {
   }
 }
 
- /* サービスリストの画像 */
-  .vision img,
-  .service-list img,
-  .flow imag,
-  .dreamsupport img,
-  .tanpopo img,
-  .service img,
-  .contact img {
-   width: 200px;
-  height: auto;
-  max-width: 100%;
-  display: block;
-  margin: 20px auto;
-}
+
 
   /* 画像のスタイル（共通） */
   img {

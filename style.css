@@ -181,26 +181,26 @@ body {
 
 #Service .service-list .img img {
   width: 100%;
-  max-width: 200px; /* スマホでも大きすぎないように */
+  max-width: 200px; /* PCで大きすぎないように */
   height: auto;
   display: block;
 }
 
-/* 右のテキスト全体 */
+/* 右のテキスト */
 #Service .service-list .detail {
   flex: 1;
-  min-width: 0;
   display: flex;
-  flex-direction: column; /* タイトルと本文を縦並びに */
-  text-align: right;      /* 全体を右寄せ */
-  gap: 8px;               /* タイトルと本文の間隔 */
+  flex-direction: column; /* タイトルと本文を縦並び */
+  justify-content: flex-start;
+  text-align: right;      /* PCでは右寄せ */
+  gap: 8px;
 }
 
 /* タイトル */
 #Service .service-list .detail h3 {
   font-size: 1.4rem;
   margin: 0;
-  text-align: right; /* 右寄せ */
+  text-align: right;
 }
 
 /* 本文 */
@@ -208,12 +208,10 @@ body {
   font-size: 1.1rem;
   margin: 0;
   line-height: 1.6;
-  text-align: right; /* 右寄せ */
+  text-align: right;
 }
 
-
-
-/* スマホ用 */
+/* 📱 スマホ用レイアウト */
 @media (max-width: 768px) {
   #Service .service-list li {
     flex-direction: column; /* 縦並び */
@@ -229,16 +227,14 @@ body {
 
   #Service .service-list .detail {
     text-align: center; /* 中央寄せに変更 */
+    gap: 6px;
   }
 
   #Service .service-list .detail h3,
   #Service .service-list .detail p {
-    text-align: center; /* タイトルと本文も中央寄せ */
+    text-align: center; /* タイトルも本文も中央揃え */
   }
 }
-
-
-
 
 /* flowとcontactセクションの画像サイズ調整 */
 .flow-image {

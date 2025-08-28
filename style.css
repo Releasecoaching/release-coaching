@@ -138,23 +138,21 @@ html, body {
   }
 }
 
-
+/* =========================================
+   Vision セクション
+========================================= */
 .vision-img img {
   width: 100%;
-  max-width: 600px; /* PCでは最大600pxに制限 */
+  max-width: 500px; /* PCでも大きくなりすぎない */
   height: auto;
   display: block;
   margin: 0 auto 20px auto;
   border-radius: 8px;
 }
 
-
-
 /* =========================================
    Service セクション
 ========================================= */
-
-/* li共通 */
 #service .service-list li {
   display: flex;
   gap: 20px;
@@ -172,7 +170,7 @@ html, body {
 
 #service .service-list .service-img img {
   width: 100%;
-  max-width: 250px; /* PCでも250px以上にならないよう制限 */
+  max-width: 250px; /* PCでも大きくなりすぎない */
   height: auto;
   display: block;
   border-radius: 8px;
@@ -183,7 +181,7 @@ html, body {
 #service .service-list .service-detail {
   flex: 1;
   display: flex;
-  flex-direction: column; /* タイトル→本文縦並び */
+  flex-direction: column;
   justify-content: flex-start;
   text-align: right;
   gap: 8px;

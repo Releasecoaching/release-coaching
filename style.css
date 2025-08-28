@@ -142,18 +142,16 @@ body {
 
 
 
-  /* 画像のスタイル（共通） */
-  img {
-    width: 100%;  /* すべての画像が親要素にフィット */
-    height: auto;
-    object-fit: cover; /* 画像が枠内に収まるようにする */
-  }
+/* =========================================
+   Service List 完全版CSS
+   ・PC：横並び（画像左・テキスト右）
+   ・スマホ：縦並び（画像上・テキスト下）
+   ========================================= */
 
-  /* サービスリストとフローの画像の間隔調整 */
- /* Serviceセクション専用のスタイル *//* PC用（デフォルト） */
+/* PC・スマホ共通 */
 #Service .service-list li {
   display: flex;
-  gap: 20px;
+  gap: 20px;               /* 画像とテキストの間隔 */
   margin-bottom: 30px;
   padding: 20px;
   background: #f9f9f9;
@@ -163,43 +161,47 @@ body {
 
 /* 左の画像 */
 #Service .service-list .img {
-  flex: 0 0 25%;
+  flex: 0 0 25%;           /* PC用幅 */
 }
 
 #Service .service-list .img img {
   width: 100%;
-  max-width: 200px; /* PCで大きすぎないように */
+  max-width: 200px;        /* PC用最大幅 */
   height: auto;
   display: block;
+  margin: 0;               /* 自動中央寄せを無効化 */
+  border-radius: 8px;      /* 任意で角丸 */
+  object-fit: cover;
 }
 
 /* 右のテキスト */
 #Service .service-list .detail {
   flex: 1;
   display: flex;
-  flex-direction: column; /* タイトルと本文を縦並び */
+  flex-direction: column;  /* タイトル→本文縦並び */
   justify-content: flex-start;
-  text-align: right;      /* PCでは右寄せ */
+  text-align: right;       /* PCは右寄せ */
   gap: 8px;
+  font-size: 1.1rem;
 }
 
-/* タイトル */
 #Service .service-list .detail h3 {
   font-size: 1.4rem;
   margin: 0;
   text-align: right;
 }
 
-/* 本文 */
 #Service .service-list .detail p {
-  font-size: 1.1rem;
   margin: 0;
   line-height: 1.6;
   text-align: right;
 }
 
-/* 📱 スマホ用レイアウト */
-@media (max-width: 768px) {
+/* =========================================
+   スマホ用レイアウト
+   max-width 767px以下
+   ========================================= */
+@media (max-width: 767px) {
   #Service .service-list li {
     flex-direction: column; /* 縦並び */
     align-items: center;
@@ -208,20 +210,22 @@ body {
 
   #Service .service-list .img {
     flex: 0 0 auto;
-    width: 80%;
+    width: 80%;            /* スマホで縮小 */
+    max-width: 200px;      /* スマホ用最大幅 */
     margin-bottom: 15px;
   }
 
   #Service .service-list .detail {
-    text-align: center; /* 中央寄せに変更 */
+    text-align: center;     /* 中央揃え */
     gap: 6px;
   }
 
   #Service .service-list .detail h3,
   #Service .service-list .detail p {
-    text-align: center; /* タイトルも本文も中央揃え */
+    text-align: center;     /* タイトルも本文も中央揃え */
   }
 }
+
 
 /* flowとcontactセクションの画像サイズ調整 */
 .flow-image {

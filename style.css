@@ -174,13 +174,12 @@ html, body {
 
 #service .service-list .service-img img {
   width: 100%;
-  max-width: 400px; /* Flow画像と同じに統一 */
-  height: auto;
-  display: block;
-  border-radius: 8px;
-  object-fit: cover;
-  margin: 0 auto;
-}
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+  }
 
 /* 右テキスト */
 #service .service-list .service-detail {

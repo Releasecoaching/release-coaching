@@ -153,6 +153,9 @@ html, body {
 /* =========================================
    Service セクション
 ========================================= */
+/* =========================================
+   Service セクション（Flow画像サイズに統一）
+========================================= */
 #service .service-list li {
   display: flex;
   gap: 20px;
@@ -171,7 +174,7 @@ html, body {
 
 #service .service-list .service-img img {
   width: 100%;
-  max-width: 250px; /* PCでも250px以上にならない */
+  max-width: 400px; /* Flow画像と同じに統一 */
   height: auto;
   display: block;
   border-radius: 8px;
@@ -211,8 +214,8 @@ html, body {
   }
 
   #service .service-list .service-img img {
-    width: 60%;
-    max-width: 150px; /* スマホで文字潰れない */
+    width: 80%;
+    max-width: 400px; /* Flow画像サイズに統一 */
     margin-bottom: 15px;
   }
 

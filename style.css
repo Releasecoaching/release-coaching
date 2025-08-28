@@ -298,16 +298,6 @@ body {
   border-radius: 8px;
   margin: 20px 0;
 }
-
-/* serviceセクションの画像とテキストを横並びに */
-.service-list li {
-  display: flex;
-  gap: 20px; /* 画像とテキストの間にギャップを設定 */
-  margin-bottom: 30px;
-  padding: 20px;
-  background: #f9f9f9;
-  border-radius: 8px;
-}
 .flow-list li {
   display: flex;
   gap: 20px; /* 画像とテキストの間にギャップを設定 */
@@ -316,7 +306,6 @@ body {
   background: #f9f9f9;
   border-radius: 8px;
 }
-.service-list img,
   .flow-image,
   .contact img {
     width: 100%;  /* 親要素にフィット */
@@ -325,10 +314,6 @@ body {
     margin: 20px auto;  /* 画像の周りに余白 */
   }
 
-.service-list .detail {
-  flex: 1; /* テキストが占める幅を残りの60%に設定 */
-  font-size: 1.1rem;
-}
 
 
 .contact-image {

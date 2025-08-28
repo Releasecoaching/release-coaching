@@ -143,13 +143,12 @@ html, body {
 ========================================= */
 .vision-img img {
   width: 100%;
-  max-width: 500px; /* PCでも大きくなりすぎない */
+  max-width: 400px;
   height: auto;
   display: block;
-  margin: 0 auto 20px auto;
+  margin: 20px auto;
   border-radius: 8px;
 }
-
 /* =========================================
    Service セクション
 ========================================= */
@@ -170,11 +169,11 @@ html, body {
 
 #service .service-list .service-img img {
   width: 100%;
-  max-width: 250px; /* PCでも大きくなりすぎない */
+  max-width: 400px;
   height: auto;
   display: block;
+  margin: 20px auto;
   border-radius: 8px;
-  object-fit: cover;
 }
 
 /* 右テキスト */

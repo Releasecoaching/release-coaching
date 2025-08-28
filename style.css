@@ -13,7 +13,7 @@ html, body {
 }
 
 .wrapper {
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
   box-sizing: border-box;
@@ -143,12 +143,13 @@ html, body {
 ========================================= */
 .vision-img img {
   width: 100%;
-  max-width: 400px;
+  max-width: 400px; /* PCでも大きくなりすぎない */
   height: auto;
   display: block;
   margin: 20px auto;
   border-radius: 8px;
 }
+
 /* =========================================
    Service セクション
 ========================================= */
@@ -160,20 +161,22 @@ html, body {
   background: #f9f9f9;
   border-radius: 8px;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 /* 左画像 */
 #service .service-list .service-img {
-  flex: 0 0 25%;
+  flex: 0 0 auto;
 }
 
 #service .service-list .service-img img {
   width: 100%;
-  max-width: 400px;
+  max-width: 250px; /* PCでも250px以上にならない */
   height: auto;
   display: block;
-  margin: 20px auto;
   border-radius: 8px;
+  object-fit: cover;
+  margin: 0 auto;
 }
 
 /* 右テキスト */
@@ -182,7 +185,7 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  text-align: right;
+  text-align: left;
   gap: 8px;
   font-size: 1.1rem;
 }
@@ -190,13 +193,13 @@ html, body {
 #service .service-list .service-detail h3 {
   font-size: 1.4rem;
   margin: 0;
-  text-align: right;
+  text-align: left;
 }
 
 #service .service-list .service-detail p {
   margin: 0;
   line-height: 1.6;
-  text-align: right;
+  text-align: left;
 }
 
 /* スマホ表示 */
@@ -208,8 +211,8 @@ html, body {
   }
 
   #service .service-list .service-img img {
-    width: 80%;
-    max-width: 200px;
+    width: 60%;
+    max-width: 150px; /* スマホで文字潰れない */
     margin-bottom: 15px;
   }
 

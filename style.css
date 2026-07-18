@@ -18,8 +18,8 @@
   --green:     #06c755;
   --green-dk:  #05a848;
   --radius:    6px;
-  --max-w:     960px;
-  --section-pad: 80px 24px;
+  --max-w:     800px;
+  --section-pad: 80px 48px;
 }
 
 html {
@@ -220,7 +220,7 @@ a {
    ===================== */
 .vision-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1.8fr 1fr;
   gap: 56px;
   align-items: start;
 }
